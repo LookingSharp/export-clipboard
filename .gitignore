@@ -1,0 +1,5 @@
+# Output produced by running the script
+clipboard_dump_*/
+
+# Pester test results
+testResults.xml
