@@ -6,3 +6,8 @@ The format is based on [Keep a Changelog 1.1.0](https://keepachangelog.com/en/1.
 and this project adheres to [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+### Added
+
+- Continuous integration workflow that runs the PowerShell Pester test suite
+  on pushes to `main` and on pull requests.
