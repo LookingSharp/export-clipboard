@@ -3,8 +3,16 @@
     Dumps every format currently on the Windows clipboard to individual files.
 
 .DESCRIPTION
-    See ../specs/Export-Clipboard-Spec.md for the authoritative behavioral
-    contract. This script is one implementation of that contract.
+    This script is one implementation of a language-neutral behavioral
+    contract. The authoritative specification is
+    specs/Export-Clipboard-Spec.md in the project repository:
+    https://github.com/LookingSharp/export-clipboard
+
+.LINK
+    https://github.com/LookingSharp/export-clipboard
+
+.LINK
+    https://github.com/LookingSharp/export-clipboard/blob/main/specs/Export-Clipboard-Spec.md
 #>
 
 Add-Type -AssemblyName System.Windows.Forms
