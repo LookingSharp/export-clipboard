@@ -1,8 +1,8 @@
 # Export-Clipboard
 
-Capture every format currently on the Windows clipboard - not just plain
-text - and write each one to a readable file for inspection, along with
-metadata about which application last wrote to the clipboard.
+Capture every format currently on the Windows clipboard and write each one
+to a readable file for inspection, along with metadata about which
+application last wrote to the clipboard.
 
 This repository may contain multiple implementations of the same behavioral
 contract over time. The initial implementation is **PowerShell**.

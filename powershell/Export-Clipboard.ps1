@@ -31,16 +31,14 @@ public class ClipboardOwnerInfo {
 }
 "@
 
-# Known clipboard format names -> file extension.
-# These are the official registered format names (RegisterClipboardFormat),
-# not something PowerShell/.NET is inventing or reinterpreting.
+# Registered clipboard format names (RegisterClipboardFormat) -> file extension.
 $extensionMap = @{
     'Text'                    = '.txt'   # CF_TEXT (predefined)
     'UnicodeText'             = '.txt'   # CF_UNICODETEXT (predefined)
-    'HTML Format'             = '.html'  # informally "CF_HTML" - registered name is literally "HTML Format"
-    'Rich Text Format'        = '.rtf'   # informally "CF_RTF"
+    'HTML Format'             = '.html'  # CF_HTML
+    'Rich Text Format'        = '.rtf'   # CF_RTF
     'Csv'                     = '.csv'
-    'FileDrop'                = '.txt'   # CF_HDROP - list of file paths, not binary
+    'FileDrop'                = '.txt'   # CF_HDROP - list of file paths
     'UniformResourceLocator'  = '.txt'   # source URL, ANSI-encoded
     'UniformResourceLocatorW' = '.txt'   # source URL, Unicode-encoded
     'PNG'                     = '.png'   # already raw PNG bytes, no conversion needed
@@ -112,7 +110,7 @@ foreach ($fmt in $data.GetFormats()) {
         $val.Dispose()
 
         if ($ext -in '.txt', '.html', '.rtf', '.csv') {
-            # Text-bearing format delivered as raw bytes - decode instead of dumping binary
+            # Text-bearing format delivered as raw bytes - decode to text
             $enc = $encodingMap[$fmt]
             if (-not $enc) { $enc = [System.Text.Encoding]::UTF8 }
             $text = $enc.GetString($bytes).TrimEnd([char]0)
