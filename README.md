@@ -12,3 +12,7 @@ The authoritative behavioral specification lives at
 
 See [`CHANGELOG.md`](CHANGELOG.md) for notable changes. Releases follow
 [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html).
+
+[`TEAM.md`](TEAM.md) defines the review team applied to specification and
+design changes. [`AGENTS.md`](AGENTS.md) is the repository policy for
+coding agents.
